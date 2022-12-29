@@ -11,8 +11,8 @@
         $_SESSION['usuario'] = "";
         $_SESSION['password'] = "";
         echo "Se ha cerrado correctamente la sesión";
-        if (!empty($_POST['url'])) {
-            header("Location: ". $_POST['url']);
+        if (!empty($_GET['url'])) {
+            header("Location: ". $_GET['url']);
         }
     } else {
         echo "No se puede cerrrar la sesión porque no tiene una iniciada";

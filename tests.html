@@ -5,16 +5,21 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-    <h1>Ingresa la informacion sobre la base de datos</h1>
-    <form action="migracion.php" method="post">
-      Usuario: <input type="text" name="usuario" /> <br />
-      Contraseña: <input type="password" name="password" /> <br />
-      Nombre de base de datos: <input type="text" name="db" /><br />
-      <input type="submit" value="Iniciar migración" />
-    </form>
-    <p>
-      El nombre de la base de datos pueder ser cualquiera, si no existe se
-      creara
-    </p>
+    <!-- Cuando no esta loggeado -->
+    <div>
+      <h1>EpiStore</h1>
+      <a href="login.php">Inicia sesión</a>&nbsp;<a href="registrer.php"
+        >Registrate</a
+      >
+    </div>
+
+    <!-- Cuando esta loggeado -->
+    <div>
+      <h1>EpiStore</h1>
+      Bienvenido <strong>Usuario</strong> <br />
+      <a href="logout.php">Cierra sesión</a>&nbsp;<a href="google.com"
+        >Carrito</a
+      >
+    </div>
   </body>
 </html>
