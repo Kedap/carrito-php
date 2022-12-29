@@ -2,7 +2,7 @@
 USE tiendita;
 -- Creando tablas
 CREATE TABLE Cliente (id_cliente INT(10) NOT NULL AUTO_INCREMENT, nombre VARCHAR(100) NOT NULL, password VARCHAR(100) NOT NULL, PRIMARY KEY(id_cliente));
-CREATE TABLE Producto (id_producto INT(10) NOT NULL AUTO_INCREMENT, descripcion VARCHAR(100) NOT NULL, producto VARCHAR(100) DEFAULT NULL, PRIMARY KEY(id_producto));
+CREATE TABLE Producto (id_producto INT(10) NOT NULL AUTO_INCREMENT, descripcion VARCHAR(100) NOT NULL, precio VARCHAR(100) DEFAULT NULL, PRIMARY KEY(id_producto));
 CREATE TABLE Venta (id_venta INT NOT NULL AUTO_INCREMENT, cantidad INT DEFAULT NULL, id_cliente INT(10) DEFAULT NULL, id_producto INT(10) DEFAULT NULL, PRIMARY KEY(id_venta), FOREIGN KEY(id_cliente) REFERENCES Cliente(id_cliente), FOREIGN KEY(id_producto) REFERENCES Producto(id_producto));
 
 -- Insertando valores
