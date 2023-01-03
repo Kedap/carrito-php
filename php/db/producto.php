@@ -26,6 +26,17 @@ function obtener_producto()
     }
 }
 
+function obtener_id_producto($descripcion)
+{
+    $conn = obt_con();
+    $resultado = $conn->query("SELECT id_producto FROM Producto WHERE descripcion = '".$descripcion."'");
+    if ($resultado->num_rows > 0) {
+        return $resultado;
+    } else {
+        die("No se pudo obtener el id");
+    }
+}
+
 function borrar_producto($id, $descripcion)
 {
     include_once "./php/db/index.php";
@@ -70,7 +81,8 @@ function mostrar_producto()
       Cantidad: $listas_select
       <input type='hidden' name='producto' value='$descripcion'></input>
       <input type='hidden' name='precio' value='$precio'></input>
-      <input type='submit' name='comprar$i' value='Comprar' />
+      <input type='submit' name='acto' value='Comprar' />
+      <input type='submit' name='acto' value='Agregar al carrito' />
     </form>
     </td>
 ";

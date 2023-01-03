@@ -1,13 +1,16 @@
 <?php
 
-function banner_login($usuario, $url)
+function banner_login($usuario, $url, $carrito)
 {
+    if (empty($carrito)) {
+        $carrito= array();
+    }
     echo "
 <div>
       <h1>EpiStore</h1>
       Bienvenido <strong>". $usuario.  "</strong> <br />
-      <a href='logout.php?url=". $url ."'>Cierra sesión</a>&nbsp;<a href='google.com'
-        >Carrito</a
+      <a href='logout.php?url=". $url ."'>Cierra sesión</a>&nbsp;<a href='carrito.php'
+        >Productos diferentes en el carrito: ". count($carrito). " </a
       >
     </div>
 ";

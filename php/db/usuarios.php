@@ -1,5 +1,5 @@
 <?php
-require "php/db/index.php";
+require_once "php/db/index.php";
 
 function registrar_usuario($usuario, $password)
 {
@@ -37,6 +37,17 @@ function comprobar_usuario($usuario, $password)
     $conn = obt_con();
     $resultado = $conn->query("SELECT * FROM Cliente WHERE nombre = '".$usuario . "' AND password = '". $password ."'");
     return $resultado->num_rows > 0;
+}
+
+function obtener_id_cliente($usuario, $password)
+{
+    $conn = obt_con();
+    $resultado = $conn->query("SELECT id_cliente FROM Cliente WHERE nombre = '".$usuario . "' AND password = '". $password ."'");
+    if ($resultado->num_rows > 0) {
+        return $resultado;
+    } else {
+        die("No se pudo autentificar el usuario");
+    }
 }
 
 ?>
