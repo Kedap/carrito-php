@@ -44,7 +44,8 @@ function obtener_id_cliente($usuario, $password)
     $conn = obt_con();
     $resultado = $conn->query("SELECT id_cliente FROM Cliente WHERE nombre = '".$usuario . "' AND password = '". $password ."'");
     if ($resultado->num_rows > 0) {
-        return $resultado;
+        $resultado = mysqli_fetch_array($resultado);
+        return $resultado['id_cliente'];
     } else {
         die("No se pudo autentificar el usuario");
     }

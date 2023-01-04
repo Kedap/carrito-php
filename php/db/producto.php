@@ -31,7 +31,8 @@ function obtener_id_producto($descripcion)
     $conn = obt_con();
     $resultado = $conn->query("SELECT id_producto FROM Producto WHERE descripcion = '".$descripcion."'");
     if ($resultado->num_rows > 0) {
-        return $resultado;
+        $resultado = mysqli_fetch_array($resultado);
+        return $resultado['id_producto'];
     } else {
         die("No se pudo obtener el id");
     }
