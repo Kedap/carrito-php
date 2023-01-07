@@ -8,6 +8,7 @@
     <h1>Inicia sesión</h1>
     <?php
       session_start();
+      require_once "php/principal.php";
     if (!empty($_POST['usuario']) && !empty($_POST['password'])) {
         include "./php/db/usuarios.php";
         if (!comprobar_usuario($_POST['usuario'], $_POST['password'])) {
@@ -16,8 +17,10 @@
         $_SESSION['usuario'] = $_POST['usuario'];
         $_SESSION['password'] = $_POST['password'];
         echo "Iniciaste sesión correctamente";
+        banner_login($_SESSION['usuario'], "index.php", $_SESSION['carrito']);
     } else if (!empty($_SESSION['usuario']) && !empty($_SESSION['password'])) {
         echo "Ya tiene una sesión abierta ". $_SESSION['usuario'] . ":)";
+        banner_login($_SESSION['usuario'], "index.php", $_SESSION['carrito']);
     }
     ?>
     <form action="login.php" method="post">

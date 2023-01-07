@@ -10,7 +10,7 @@
     if (!empty($_POST['usuario']) && !empty($_POST['password'])) {
         include "./php/db/usuarios.php";
         registrar_usuario($_POST['usuario'], $_POST['password']);
-        echo "Se creo el usuario correctamente";
+        echo "Se creo el usuario correctamente puedes <a href='login.php'>Iniciar sesión</a>";
     }
     ?>
     <form action="registrer.php" method="post">
