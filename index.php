@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <title>EpiStore</title>
+  <title>Tiendita</title>
   <meta charset="UTF-8" />
 </head>
 

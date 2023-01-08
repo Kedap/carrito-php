@@ -1,0 +1,28 @@
+ ___ _   _ ____ _____ ____  _   _  ____ ____ ___ ___  _   _ _____ ____  
+|_ _| \ | / ___|_   _|  _ \| | | |/ ___/ ___|_ _/ _ \| \ | | ____/ ___| 
+ | ||  \| \___ \ | | | |_) | | | | |  | |    | | | | |  \| |  _| \___ \ 
+ | || |\  |___) || | |  _ <| |_| | |__| |___ | | |_| | |\  | |___ ___) |
+|___|_| \_|____/ |_| |_| \_\\___/ \____\____|___\___/|_| \_|_____|____/ 
+                                                                        
+                                                                        
+----------------------------------------------------------------------
+ 
+1. Primero se necesita importar la base de datos que es llamado base.sql en
+ este documento, se puede hacer ejecutando el siguiente comando:
+ 
+ SOURCE C:/ruta/del/archivo/base.sql;
+ 
+ O también se puede hacer con phpmyadmin en la opción de importar base, también
+ esto te puede ayudar:
+ https://help.dreamhost.com/hc/es/articles/214395768-phpMyAdmin-C%C3%B3mo-importar-o-restaurar-una-base-de-datos-o-una-tabla
+ 
+2. Mudar todo lo que esta dentro de tu carpeta en donde estés trabajando, puede
+ ser XAMPP o AppServ que puede ser la ruta:
+
+ C:\users\usuario\xmapp\htdocs  Para XMAPP o
+ 
+ C:\users\usuario\AppServ\www   Para AppServ
+ 
+ ES RECOMENDABLE CREAR UNA CARPETA DENTRO DE LAS ANTES DICHAS PARA TENER MEJOR ORDEN
+ 
+3. Ahora se puede entrar con tu navegador a la dirección de localhost o 127.0.0.1

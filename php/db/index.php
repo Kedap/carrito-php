@@ -1,6 +1,7 @@
 <?php
 
-function obt_con($usuario = 'root', $password = '',$db = 'tiendita')
+/* Cambia la contraseña y el usuario si es necesario */
+function obt_con($usuario = 'root', $password = '',$db = 'tienda')
 {
     $conn = mysqli_connect('localhost', $usuario, $password, $db);
     if ($conn->connect_error) {
