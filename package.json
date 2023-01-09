@@ -1,0 +1,10 @@
+{
+  "name": "f-trab",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kedap <kedap.dev@protonmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

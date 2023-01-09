@@ -4,6 +4,7 @@
 <head>
   <title>EpiStore</title>
   <meta charset="UTF-8" />
+<link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 
 <body>

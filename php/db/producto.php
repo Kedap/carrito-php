@@ -49,56 +49,42 @@ function borrar_producto($id, $descripcion)
 
 function mostrar_producto()
 {
-    $titulos = "<tr>";
     $productos = obtener_producto();
+    $seletcs = generar_select();
+    ?>
+<div class="container">
+<div class="row">
+    <?php
     for ($i=0; $i < count($productos); $i++) { 
-        $nombre = $productos[$i]->descripcion;
-        $titulos = $titulos . "\n\t<th>$nombre</th>";
-    }
-    $titulos = $titulos . "\n</tr>";
-
-    $imagenes = "<tr>";
-    for ($i=0; $i < count($productos); $i++) { 
-        $id = $productos[$i]->id_producto;
-        $imagenes = $imagenes . "
-    <td>
-      <center>
-        <img src='img/$id.jpg' alt='un foton' height='100px' width='100px'/>
-      </center>
-    </td>
-    ";
-    }
-    $imagenes = $imagenes . "\n</tr>";
-
-    $precios = "<tr>";
-    for ($i=0; $i < count($productos); $i++) { 
-        $precio = $productos[$i]->precio;
-        $descripcion = $productos[$i]->descripcion;
-        $listas_select = generar_select();
-        $precios = $precios . "
-    <td>
-      \$$precio
-    <form method='post'>
-      Cantidad: $listas_select
-      <input type='hidden' name='producto' value='$descripcion'></input>
-      <input type='hidden' name='precio' value='$precio'></input>
-      <input type='submit' name='acto' value='Comprar' />
-      <input type='submit' name='acto' value='Agregar al carrito' />
-    </form>
-    </td>
+        $producto = $productos[$i];
+        $precio = ($producto->precio == 0) ? "Una sonriza y un abrazo, plz" : "\$$producto->precio" ;
+        echo "
+<div class='card' style='width: 18rem;'>
+<form method='post'>
+  <img src='img/$producto->id_producto.jpg' class='card-img-top'>
+  <div class='card-body'>
+    <h5 class='card-title'>$producto->descripcion</h5>
+    <h6 class='card-subtitle mb-2 text-muted'>$precio</h6>
+Cantidad:
+$seletcs
+      <input type='hidden' name='producto' value='$producto->descripcion'></input>
+      <input type='hidden' name='precio' value='$producto->precio'></input>
+      <input class='btn btn-primary' type='submit' name='acto' value='Comprar' />
+      <input class='btn btn-secundary' type='submit' name='acto' value='Agregar al carrito' />
+  </div>
+</form>
+</div>
 ";
-    }
-    $precios = $precios. "\n</tr>";
-    echo("<table>
-  $titulos
-  $imagenes
-  $precios
-  </table>");
+    }  
+    ?>
+</div>
+</div>
+    <?php
 }
 
 function generar_select()
 {
-    $etiqueta = "<select name='cantidad'>";
+    $etiqueta = "<select name='cantidad' class='form-select'>";
     for ($i=1; $i <= 20; $i++) { 
         $etiqueta = $etiqueta . "\n<option value='$i'>$i</option>";
     }

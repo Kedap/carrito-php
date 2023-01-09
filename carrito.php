@@ -3,6 +3,7 @@
   <head>
     <title>Comprar carrito</title>
     <meta charset="UTF-8" />
+<link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
   </head>
   <body>
     <h1>Comprar carrito</h1>

@@ -3,6 +3,7 @@
   <head>
     <title>Registrarse</title>
     <meta charset="UTF-8" />
+<link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
   </head>
   <body>
     <h1>Registrar nuevo usuario</h1>
@@ -13,10 +14,20 @@
         echo "Se creo el usuario correctamente puedes <a href='login.php'>Iniciar sesión</a>";
     }
     ?>
+
+
     <form action="registrer.php" method="post">
-      Usuario: <input type="text" name="usuario" /> <br />
-      Contraseña: <input type="password" name="password" /> <br />
-      <input type="submit" value="Registrar nuevo usuario" />
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Nuevo usuario</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="usuario">
+        <div id="emailHelp" class="form-text">Este sera el usuario con el cual iniciaras sesión</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Registrar nuevo usuario</button>
     </form>
+
   </body>
 </html>

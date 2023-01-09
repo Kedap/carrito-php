@@ -3,6 +3,7 @@
   <head>
     <title>Inicio de sesión</title>
     <meta charset="UTF-8" />
+<link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
   </head>
   <body>
     <h1>Inicia sesión</h1>
@@ -23,10 +24,18 @@
         banner_login($_SESSION['usuario'], "index.php", $_SESSION['carrito']);
     }
     ?>
+
     <form action="login.php" method="post">
-      Usuario: <input type="text" name="usuario" /> <br />
-      Contraseña: <input type="password" name="password" /> <br />
-      <input type="submit" value="Iniciar sesión" />
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Usuario</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="usuario">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Iniciar sesión</button>
     </form>
+
   </body>
 </html>
