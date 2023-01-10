@@ -17,10 +17,10 @@
         $_SESSION['usuario'] = $_POST['usuario'];
         $_SESSION['password'] = $_POST['password'];
         echo "Iniciaste sesión correctamente";
-        banner_login($_SESSION['usuario'], "index.php", $_SESSION['carrito']);
+        echo"<br>Regresa a la <a href='index.php'>pagina principal</a>";
     } else if (!empty($_SESSION['usuario']) && !empty($_SESSION['password'])) {
         echo "Ya tiene una sesión abierta ". $_SESSION['usuario'] . ":)";
-        banner_login($_SESSION['usuario'], "index.php", $_SESSION['carrito']);
+        echo"<br>Regresa a la <a href='index.php'>pagina principal</a>";
     }
     ?>
     <form action="login.php" method="post">

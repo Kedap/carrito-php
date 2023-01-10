@@ -45,7 +45,7 @@ function mostrar_carrito($carrito)
         $formulario = $formulario . "<br/>___________________________________";
         $formulario = $formulario . "<br/><input type='submit' value='Comprar' /></form>";
     }
-    echo $formulario;
+    echo $formulario ."<form action='comprar.php' method='get'><input type='hidden' name='accion' value='todo'/><input type='submit' value='Comprar TODO el carrito' /></form>";
 }
 
 ?>
