@@ -36,6 +36,7 @@
       </div>
       <button type="submit" class="btn btn-primary">Iniciar sesión</button>
     </form>
-
+    <br/>
+    <a href="index.php" class="btn btn-primary">Ir a la pagina principal</a>
   </body>
 </html>

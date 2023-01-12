@@ -7,7 +7,8 @@
   </head>
   <body>
     <h1>Gracias por tu compra</h1>
-    <p>Texto de relleno en donde se da las gracias por haber comprado en esta tienda</p>
+    <p>GRACIAS POR LA PREFERENCIA, ESPERO Y VUELVAS PRONTO</p>
+    <a href="index.php" class="btn btn-primary">Regresar a la pagina principal</a>
     <?php
     session_start();
     if (empty($_POST) || empty($_SESSION['carrito'])) {

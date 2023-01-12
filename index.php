@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <title>Oxxo</title>
+  <title>aZon</title>
   <meta charset="UTF-8" />
 <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
 </head>

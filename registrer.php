@@ -29,5 +29,7 @@
       <button type="submit" class="btn btn-primary">Registrar nuevo usuario</button>
     </form>
 
+    <br/>
+    <a href="index.php" class="btn btn-primary">Ir a la pagina principal</a>
   </body>
 </html>
